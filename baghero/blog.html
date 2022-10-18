@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Bag Heros</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<script src="./js/jquery-3.6.0.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./js/preloader.js"></script>
+
+    <!-- <script type="text/javascript" src="./js/ScrollMagic.js.download"></script>
+    <script type="text/javascript" src="./js/TweenMax.min.js.download"></script>
+    <script type="text/javascript" src="./js/animation.gsap.js.download"></script>
+    <script type="text/javascript" src="./js/debug.addIndicators.js.download"></script> -->
+    <link rel="stylesheet" href="./css/main.css">
+
+
+</head>
+
+    <body>
+<style>
+
+.blog .section1 {
+  height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./images/blog-banner.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.blog .section1 h2 {
+  font-size: 45px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: capitalize;
+
+}
+
+.img-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.img-container .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img-container .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0000004a;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 1s ease;
+}
+.img-container .overlay2 {
+    position: absolute;
+    top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background-color: #0000004a;
+  transition: .5s ease;
+  height: 20%;
+}
+.img-container:hover .overlay {
+  height: 100%;
+}
+.img-container:hover .overlay2 {
+  height: 0%;
+}
+
+.img-container .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.blog-content {
+    box-shadow: 1px 1px 9px 0px #bdbdbd;
+    text-align: center;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.blog-content:hover img {
+    transform: scale(1.4);
+    transition: 3s ease-in-out;
+}
+.blog-img{
+    overflow: hidden;
+}
+.blog-text{
+    padding: 10px;
+}
+section.blog {
+    padding-top: 3.5rem;
+}
+</style>
+<div id="preloader">
+  <div id="progstat"></div>
+  <div id="progress"></div>
+</div>  
+<div class="nav-head">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand" href="./"><img class="img-fluid header-logo" src="./images/footer_logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto mr-5">
+            <li class="nav-item ">
+                <a class="nav-link" href="./index.html"> Home</a>
+              </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="./about.html"> About</a>
+            </li>
+            <!-- <span class="sr-only">(current)</span> -->
+
+            <li class="nav-item active">
+                <a class="nav-link" href="./blog.html">Blogs</a>
+              </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="./career.html">Careers</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="./contact.html"> Contact</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+      </div>
+      <section class="blog">
+        <div class="containter-fluid p-0 m-0 section1">
+        <h2>Blogs</h2>
+        </div> 
+        <div class="container pt-5">
+            <div class="row">
+               <div class="col-md-6">
+                <div class="img-container">
+                    <img src="./images/blog-img (1).jpg" alt="Avatar" class="image" style="width:100%">
+                    <div class="overlay2">
+                        <div class="text">Lorem ipsum dolor sit amet.</div>
+                      </div>
+                    <div class="overlay">
+                      <div class="text">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non vero saepe, aut autem eos modi fugit eligendi deserunt, in eum tenetur dolorem dicta aperiam eaque officiis ut accusamus perferendis reiciendis.</p>
+                      </div>
+                    </div>
+                
+                  </div>
+
+                  <div class="row mt-4">
+                      <div class="col-md-6">
+                        <div class="blog-content">
+                            <div class="blog-img">
+                            <img src="./images/blog-img (3).jpg" class="img-fluid">
+                            </div>
+                            <div class="blog-text">
+                            <h5>Lorem ipsum dolor sit amet consectetu</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, in?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, praesentium saepe voluptatem, iure corporis magnam dignissimos delectus illo eveniet corrupti hic officia sunt culpa quibusdam dolore voluptates quos beatae rerum.</p>
+                                            </div>
+                                            </div>     
+                      </div>
+                      <div class="col-md-6">
+                        <div class="blog-content">
+                            <div class="blog-img">
+                                <img src="./images/blog-img (4).jpg" class="img-fluid">
+                                </div>
+                            <div class="blog-text">
+                            <h5>Lorem ipsum dolor sit ctetu</h5>
+                            <p>Lorem ipsum, dolor sit amet coning elit. Commodi, in?</p>
+                            <p>Lorem ipsum dolor sit amet cons voluptatem, iure corporis magnam dignissimos delectus illo eveniet corrupti hic officia sunt culpa quibusdam dolore voluptates quos beatae rerum.</p>
+                                            </div>
+                                            </div>     
+                      </div>
+                  </div>
+               </div> 
+               <div class="col-md-3">
+                <div class="blog-content">
+                    <div class="blog-img">
+                        <img src="./images/blog-img (8).jpg" class="img-fluid">
+                        </div>
+<div class="blog-text">
+<h5>Lorem ipsum dolor sit amet consectetu</h5>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, in?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, praesentium saepe voluptatem, iure corporis magnam dignissimos delectus illo eveniet corrupti hic officia sunt culpa quibusdam dolore voluptates quos beatae rerum.</p>
+                </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-img">
+                        <img src="./images/blog-img (5).jpg" class="img-fluid">
+                        </div>
+                    <div class="blog-text">
+                    <h5>Lorem ipsum dolor sit ctetu</h5>
+                    <p>Lorem ipsum, dolor sit amet coning elit. Commodi, in?</p>
+                    <p>Lorem ipsum dolor sit amet cons voluptatem, iure corporis magnam dignissimos delectus illo eveniet corrupti hic officia sunt culpa quibusdam dolore voluptates quos beatae rerum.</p>
+                                    </div>
+                                    </div>   
+               </div> 
+               <div class="col-md-3">
+                <div class="blog-content ">
+                   <div class="blog-img">
+                            <img src="./images/blog-img (2).jpg" class="img-fluid">
+                            </div>
+                    <div class="blog-text">
+                    <h5>Lorem ipsum dolor sit </h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, in?</p>
+                    <p>Lorem ipsum dolor sit am iure corporis magnorrupti hic officia sunt culpa quibusdam dolore voluptates quos beatae rerum.</p>
+                                    </div>
+                                    </div>
+        <div class="blog-content">
+            <div class="blog-img">
+                <img src="./images/blog-img (6).jpg" class="img-fluid">
+                </div>
+            <div class="blog-text">
+            <h5>Lorem ipsum dolor sit ctetu</h5>
+            <p>Lorem ipsum, dolor sit amet coning elit. Commodi, in?</p>
+            <p>Lorem ipsum dolor sit amet cons voluptatem, iure corporis magnam dignissimos delectus illo eveniet corrupti hic officia sunt culpa quibusdam dolore voluptates quos beatae rerum.</p>
+                            </div>
+                            </div>   
+                            
+            </div> 
+            </div>
+        </div>
+
+
+        </section>
+
+        <footer class="section10 py-4" id="section10">
+          <section class="container">
+              <form method="POST" action="./contact.php" name="contact-form" class="quick-contact">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <input type="text" class="form-control" id="name" placeholder="Name" name="name" required>
+                            </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+                            </div>
+                      </div>
+                      <div class="col-md-5">
+                          <div class="form-group">
+                              <input type="tel" class="form-control" id="phone" placeholder="Phone Number" name="mobile" required  maxlength="10" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                            </div>
+                      </div>
+                      <div class="col-md-5">
+                          <div class="form-group">
+                              <textarea class="form-control" id="message" rows="1" placeholder="Message" name="message"></textarea>
+                            </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="form-group">
+                          <input type="submit" class="form-control" value="Submit" id="submit" name="submit">
+                          </div>
+                      </div>
+                  </div>
+              
+              
+                  
+                  
+                </form>
+          
+          </section>
+        
+        
+                      <section class="container-fluid mt-3">
+                          <div class="row no-margin align-items-center">
+                          
+                              <div class="col-md-4  text-center"> 
+                                  
+                                  <p class="mb-0"> <strong>Created with <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> by</strong></p>
+                                  <p class="mb-0 footer-copyright"> Bag Heros  </p>
+                              </div>
+                              
+                              <div class="col-md-4  text-center">
+                                  <a href="./">
+                                  <img src="./images/footer_logo.png" class="footer-logo img-fluid" alt="Logo">
+                                  </a>
+                              </div>
+                              <div class="col-md-4 text-center">
+                                 
+              <p class="mb-0">	<i class="fa fa-envelope"></i> hello@bagheros.com</p>
+              <p  class="mb-0">	<i class="fa fa-phone"></i> 9848284329</p>
+          
+                              
+                              
+                              </div>
+                          </div>
+                      </section>
+                  </footer>
+                  <script>
+                    $( document ).ready(function() {
+
+                       $(".quick-contact").get(0).reset();
+                    });
+                      </script>
+    </body>
+</html>

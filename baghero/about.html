@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Bag Heros</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<script src="./js/jquery-3.6.0.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./js/preloader.js"></script>
+  
+    <link rel="stylesheet" href="./css/main.css">
+
+
+</head>
+
+    <body>
+        <style>
+  #set-height {
+  display: block;
+}
+#v0 {
+  position: fixed;
+    top: 58px;
+  left: 0;
+  width: 100%;
+}
+#v1 {
+    position: fixed;
+    top: 62px;
+    left: 0;
+    width: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+        </style>
+                <div id="preloader">
+                  <div id="progstat"></div>
+                  <div id="progress"></div>
+              </div>  
+    <div class="nav-head">
+<nav class="navbar navbar-expand-lg navbar-dark ">
+    <a class="navbar-brand" href="./"><img class="img-fluid header-logo" src="./images/footer_logo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto mr-5">
+        <li class="nav-item ">
+            <a class="nav-link" href="./index.html"> Home</a>
+          </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="./about.html"> About</a>
+        </li>
+        <!-- <span class="sr-only">(current)</span> -->
+
+        
+        <li class="nav-item">
+            <a class="nav-link" href="./blog.html">Blogs</a>
+          </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="./career.html">Careers</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./contact.html"> Contact</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+  <div id="set-height"></div>
+  
+  <video id="v0" tabindex="0" autobuffer="autobuffer" preload="preload" class="d-xs-none d-sm-block">
+  <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="./images/about_vid.mp4"></source>
+    <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+  </video>
+  <video id="v1" tabindex="0" autobuffer="autobuffer" preload="preload" class="d-xs-block d-sm-none">
+    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="./images/about_vid_mob.mp4"></source>
+      <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+    </video>
+       
+  <footer class="section10 py-4" id="section10">
+    <section class="container">
+        <form method="POST" action="./contact.php" name="contact-form" class="quick-contact">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="Name" name="name" required>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+                      </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <input type="tel" class="form-control" id="phone" placeholder="Phone Number" name="mobile" required  maxlength="10" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                      </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <textarea class="form-control" id="message" rows="1" placeholder="Message" name="message"></textarea>
+                      </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                    <input type="submit" class="form-control" value="Submit" id="submit" name="submit">
+                    </div>
+                </div>
+            </div>
+
+          </form>
+    
+    </section>
+  
+  
+                <section class="container-fluid mt-3">
+                    <div class="row no-margin align-items-center">
+                    
+                        <div class="col-md-4  text-center"> 
+                            
+                            <p class="mb-0"> <strong>Created with <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> by</strong></p>
+                            <p class="mb-0 footer-copyright"> Bag Heros  </p>
+                        </div>
+                        
+                        <div class="col-md-4  text-center">
+                            <a href="./">
+                            <img src="./images/footer_logo.png" class="footer-logo img-fluid" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="col-md-4 text-center">
+                           
+        <p class="mb-0">	<i class="fa fa-envelope"></i> hello@bagheros.com</p>
+        <p  class="mb-0">	<i class="fa fa-phone"></i> 9848284329</p>
+    
+                        
+                        
+                        </div>
+                    </div>
+                </section>
+  </footer>
+            <script>
+              $( document ).ready(function() {
+                 $(".quick-contact").get(0).reset();
+              });
+                </script>
+
+
+
+        <script>
+
+
+var frameNumber = 0, // start video at frame 0
+    // lower numbers = faster playback
+    playbackConst = 1000, 
+    // get page height from video duration
+    setHeight = document.getElementById("set-height"), 
+    // select video element         
+    vid = document.getElementById('v0'); 
+    vid_mob = document.getElementById('v1'); 
+    
+    // var vid = $('#v0')[0]; // jquery option
+
+// dynamically set the page height according to video length
+vid.addEventListener('loadedmetadata', function() {
+  setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+});
+vid_mob.addEventListener('loadedmetadata', function() {
+  setHeight.style.height = Math.floor(vid_mob.duration) * playbackConst + "px";
+});
+
+// Use requestAnimationFrame for smooth playback
+function scrollPlay(){  
+  var frameNumber  = window.pageYOffset/playbackConst;
+  vid.currentTime  = frameNumber;
+  vid_mob.currentTime  = frameNumber;
+  window.requestAnimationFrame(scrollPlay);
+}
+
+window.requestAnimationFrame(scrollPlay);
+
+        </script>
+    </body>
+</html>
