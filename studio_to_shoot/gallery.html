@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="studiotoshoot">
+		<title>Studio to shoot</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="icon" href="img/icon.png">
+		<link href="css/about.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/malisia-icons.css">
+		<link rel="stylesheet" href="css/plugins.css">
+		<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" charset="UTF-8" src="js/common.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="css/util.js"></script>
+<style>
+	.img-hover-zoom {
+  /* height: 100%; [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .7s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.2);
+
+}
+.studio_img {
+    width: 100%;  
+    overflow: hidden; 
+	margin-bottom: 10px;
+  }
+  
+  
+  .studio_img img {
+    transition: transform .7s ease;
+
+  }
+  
+  
+  .studio_img:hover img {
+    transform: scale(1.2);
+  }
+  .content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
+
+.fadeIn-left{
+  left: 20%;
+}
+
+.fadeIn-right{
+  left: 80%;
+}
+</style>
+</head>
+
+	<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" class="">
+
+	  	<!-- <div class="preloader" style="display: none;">
+	        <div class="loader"></div>
+	    </div> -->
+
+	    <div class="content-mask close-menu-panel"></div>
+
+		<main class="wrapper">			
+
+			<div class="nav-wrapper large-nav">
+				<nav class="navigation">
+					<div>
+	
+						<!-- <div> -->
+							<div class="nav-table column-100 text-center">
+								<div class="logo-wrapper">
+									<a class="logo-inner logo" href="index.html"> <img src="./img/studio logo.png" alt="Logo"> </a>
+								</div>
+								<ul class="menu">
+									<li class=""> <a href="./index.html">Home</a> </li>
+									<li class=""> <a href="./about-us.html" >About</a>
+									
+									</li>
+									<li class=""> <a href="./studio.html" >Studio</a>
+									
+									</li>
+									<li class=""> <a href="./gallery.html"  >Gallery </a>
+										
+									</li>
+									<li class=""> <a href="contact.html">Contact </a> </li>
+								</ul>
+	
+							</div>
+							
+							
+					
+						<!-- </div> -->
+						<div class="nav-bottom"> 
+							<a id="search-toggle" href="#" class="open-search-panel" data-toggle-target=".search-panel">
+								<div class="search icon"></div>
+							</a>
+						</div>
+					</div>
+				</nav>
+	
+				<section class="search-panel">
+					<div class="search container">
+						<form class="mb-0">
+							<input type="text" placeholder="Enter Search Term" name="search">
+							<button type="submit" class="button draw-border">Search</button>
+						</form>
+					</div>
+				</section>
+			</div>
+	
+			<div class="nav-wrapper small-nav">
+	
+				<nav class="navigation">
+					<div>
+						<div class="logo-wrapper">
+							<a class="logo-inner logo" href="index.html">
+								<img src="img/studio logo.png" alt="Logo">
+							</a>
+						</div>
+						<div class="nav-bottom">
+							<a id="nav-toggle" href="#" class="open-menu-panel" data-toggle-target=".side-panel"><span></span></a>
+							<a id="search-toggle" href="#" class="open-search-panel" data-toggle-target=".search-panel"><div class="search icon"></div></a>
+						</div>
+					</div>
+				</nav>
+	
+				<section class="side-panel d-table">
+					<a href="#" class="close-menu-panel close-panel-wrapper" data-toggle-target=".side-panel"><span class="close black"></span></a>
+					<div class="d-table-cell column-100 text-center">
+						<ul class="menu">
+							<li class=""> <a href="index.html">Home</a>
+								
+							</li>
+							<li class=""> <a href="./about-us.html">About</a>
+							
+							</li>
+							<li class=""> <a href="./studio.html">Studio</a>
+								
+							</li>
+							<li class=""> <a href="./gallery.html">Gallery </a>
+							
+							</li>
+							<li class=""> <a href="contact.html">Contact </a>
+								
+							</li>
+						</ul>
+					</div>
+				</section>
+	
+				<section class="search-panel">
+					<div class="search container">
+						<form class="mb-0">
+							  <input type="text" placeholder="Enter Search Term" name="search">
+							  <button type="submit" class="button draw-border">Search</button>
+						</form>
+					</div>
+				</section>
+	
+			</div>
+
+			<div class="content-wrapper">
+
+				<section class="inner-section-30 pb-0">
+					<div class="isotope-wrapper">
+
+						<div class="container">
+		                    <div class="row no-margin">
+		                        <div class="column column-100 grid ">
+		                        	<figure class="hover-overlay mask aos-init aos-animate" data-aos="remove-mask" data-aos-delay="100" data-aos-once="true">
+										<img src="./img/gallery.jpg" class="img-fill" alt="Image">								
+									</figure>
+								</div>
+							</div>
+						</div>				
+
+					</div>
+				</section>
+
+				<section class="header-section">
+					<div class="container">
+						<div class="row no-margin">
+							<div class="column column-100">
+								<h1 class="section-title jumbo-text">A Fine  <span class="text-colour">Art Gallery</span></h1>
+								
+							</div>
+						</div>
+					</div>
+				</section>		
+
+
+				<!-- <section id="portfolio">
+					<div class="container">
+						<div class="isotope-wrapper">
+							<div class="floating-filters"> <span class="button button-outline borderless pl-0" data-toggle-target=".isotope-filter-wrapper">Filter Works</span> </div>
+							<div class="isotope-filter-wrapper mb-40">
+								<div class="row no-margin">
+									<div class="column column-100"> <a href="#" class="button button-outline draw-border" data-filter="*">All</a> <a href="#" class="button button-outline draw-border" data-filter=".model">Model Shoot</a> <a href="#" class="button button-outline draw-border" data-filter=".product">Product Shoot</a> <a href="#" class="button button-outline draw-border" data-filter=".matrimony">Matrimony</a><a href="#" class="button button-outline draw-border" data-filter=".corporate">Corporate Shoot</a> </div>
+								</div>
+							</div>
+				<div class="row no-margin"> 
+					<div class="column img-col">
+
+									
+						<div class="studio_img "  >
+							<img src="./img/green4.jpg" class="img-fill" alt="Image">
+							<div class="d-table-cell align-bottom static-caption text-white">
+
+								<div class="overlay-details"> <span class="strong-link">View Gallery <i class="fa fa-long-arrow-right"></i></span> </div>
+							</div>
+							<a href="./img/green4.jpg" class="cover-link" data-fancybox="gallery"></a>								
+						</div>
+						<div class="studio_img "  >
+							<img src="./img/portfolio-1.jpg" class="img-fill" alt="Image">
+							<div class="d-table-cell align-bottom static-caption text-white">
+
+								<div class="overlay-details"> <span class="strong-link">View Gallery <i class="fa fa-long-arrow-right"></i></span> </div>
+							</div>
+							<a href="./img/portfolio-1.jpg" class="cover-link" data-fancybox="gallery"></a>								
+						</div>
+				
+					  <img src="./img/portfolio-11.jpg" style="width:100%">
+					  <img src="./img/portfolio-3.jpg" style="width:100%">
+					  <img src="./img/portfolio-11.jpg" style="width:100%">
+					
+					
+					</div>
+					<div class="column img-col">
+						<img src="./img/portfolio-32.jpg" style="width:100%">
+						<img src="./img/portfolio-1.jpg" style="width:100%">
+						<img src="./img/portfolio-1.jpg" style="width:100%">
+						
+					
+					</div>  
+				
+					
+				  </div>
+
+
+</div>
+</div>
+</section>
+ -->
+
+
+
+
+
+				<section id="portfolio">
+					<div class="container">
+						<div class="isotope-wrapper">
+							<div class="floating-filters"> <span class="button button-outline borderless pl-0" data-toggle-target=".isotope-filter-wrapper">Filter Works</span> </div>
+							<div class="isotope-filter-wrapper mb-40">
+								<div class="row no-margin">
+									<div class="column column-100"> 
+										<a href="#" class="button button-outline draw-border" data-filter="*">All</a> 
+										<a href="#" class="button button-outline draw-border" data-filter=".model">Model Shoot</a>
+										 <a href="#" class="button button-outline draw-border" data-filter=".product">Product Shoot</a> 
+										 <a href="#" class="button button-outline draw-border" data-filter=".matrimony">Matrimony </a> 
+										 <a href="#" class="button button-outline draw-border" data-filter=".corporate">Corporate Shoot </a>
+										</div>
+								</div>
+							</div>
+							<div class="row no-margin lh-0 grid" data-isotope="{ &quot;itemSelector&quot;: &quot;.column&quot;, &quot;cellsByRow&quot;: &quot;fitRows&quot;, &quot;masonry&quot;: { &quot;columnWidth&quot;: &quot;.grid-sizer&quot; } }" style="position: relative; height: 1714.95px;">
+								<div class="grid-sizer column column-50 photography mb-40" style="position: absolute; left: 0px; top: 0px;">
+									<figure class="hover-overlay mask aos-init" data-aos="remove-mask" data-aos-delay="100" data-aos-once="true"> <img src="./img/green_shoot.jpg" class="img-fill" alt="Image">
+										<figcaption class="d-table">
+											<div class="d-table-cell align-bottom static-caption text-white">
+
+												<div class="overlay-details"> <span class="strong-link">View Gallery <i class="fa fa-long-arrow-right"></i></span> </div>
+											</div>
+											<a href="./img/green_shoot.jpg" class="cover-link" data-fancybox="gallery"></a>
+										</figcaption>
+									</figure>
+								</div>
+								<div class="column column-40 model mb-40" style="position: absolute; left: 342.984px; top: 0px;">
+									<figure class="hover-overlay mask aos-init" data-aos="remove-mask" data-aos-delay="200" data-aos-once="true"> <img src="./img/portfolio-32.jpg" class="img-fill" alt="Image">
+										<figcaption class="d-table">
+											<div class="d-table-cell align-bottom static-caption text-white">
+												
+												<div class="overlay-details"> <span class="strong-link">View Gallery <i class="fa fa-long-arrow-right"></i></span> </div>
+											</div>
+											<a href="./img/portfolio-32.jpg" class="cover-link" data-fancybox="gallery"></a>
+										</figcaption>
+									</figure>
+								</div>
+								<div class="column column-40 model mb-40" style="position: absolute; left: 0px; top: 342.984px;">
+									<figure class="hover-overlay mask aos-init" data-aos="remove-mask" data-aos-delay="100" data-aos-once="true"> <img src="./img/green1.jpg" class="img-fill" alt="Image">
+										<figcaption class="d-table">
+											<div class="d-table-cell align-bottom static-caption text-white">
+
+												<div class="overlay-details"> <span class="strong-link">View Gallery <i class="fa fa-long-arrow-right"></i></span> </div>
+											</div>
+											<a href="./img/green1.jpg" class="cover-link" data-fancybox="gallery"></a>
+										</figcaption>
+									</figure>
+								</div>
+
+								<div class="column column-50 matrimony mb-40" style="position: absolute; left: 615px; top: 308.316px;">
+									<figure class="hover-overlay mask aos-init" data-aos="remove-mask" data-aos-delay="100" data-aos-once="true"> <img src="./img/matrimony3.jpg" class="img-fill" alt="Image">
+										<figcaption class="d-table">
+											<div class="d-table-cell align-bottom static-caption text-white">
+											
+												<div class="overlay-details"> <span class="strong-link">View Gallery <i class="fa fa-long-arrow-right"></i></span> </div>
+											</div>
+											<a href="./img/matrimony3.jpg" class="cover-link" data-fancybox="gallery"></a>
+										</figcaption>
+									</figure>
+								</div>
+								
+								<div class="column column-33 product mb-40" style="position: absolute;left:403.5px;  top: 685.968px;">
+									<figure class="hover-overlay " > <img src="./img/product1.jpeg" class="img-fill" alt="Image">
+										<figcaption class="d-table">
+											<div class="d-table-cell align-bottom static-caption text-white">
+											
+												<div class="overlay-details"> <span class="strong-link">View Gallery <i class="fa fa-long-arrow-right"></i></span> </div>
+											</div>
+											<a href="./img/product1.jpeg" class="cover-link" data-fancybox="gallery"></a>
+										</figcaption>
+									</figure>
+								</div>
+								<div class="column column-50 corporate mb-40" style="position: absolute; left: 342.984px; top: 0px;">
+									<figure class="hover-overlay mask aos-init" data-aos="remove-mask" data-aos-delay="200" data-aos-once="true"> <img src="./img/corporate1.jpg" class="img-fill" alt="Image">
+										<figcaption class="d-table">
+											<div class="d-table-cell align-bottom static-caption text-white">
+												
+												<div class="overlay-details"> <span class="strong-link">View Gallery <i class="fa fa-long-arrow-right"></i></span> </div>
+											</div>
+											<a href="./img/corporate1.jpg" class="cover-link" data-fancybox="gallery"></a>
+										</figcaption>
+									</figure>
+								</div>
+								<div class="column column-33 corporate mb-40" style="position: absolute; left: 342.984px; top: 0px;">
+									<figure class="hover-overlay mask aos-init" data-aos="remove-mask" data-aos-delay="200" data-aos-once="true"> <img src="./img/corporate2.jpg" class="img-fill" alt="Image">
+										<figcaption class="d-table">
+											<div class="d-table-cell align-bottom static-caption text-white">
+												
+												<div class="overlay-details"> <span class="strong-link">View Gallery <i class="fa fa-long-arrow-right"></i></span> </div>
+											</div>
+											<a href="./img/corporate2.jpg" class="cover-link" data-fancybox="gallery"></a>
+										</figcaption>
+									</figure>
+								</div>
+								<div class="column column-50 model mb-40" style="position: absolute; left: 342.984px; top: 0px;">
+									<figure class="hover-overlay mask aos-init" data-aos="remove-mask" data-aos-delay="200" data-aos-once="true"> <img src="./img/portfolio-7.jpg" class="img-fill" alt="Image">
+										<figcaption class="d-table">
+											<div class="d-table-cell align-bottom static-caption text-white">
+												
+												<div class="overlay-details"> <span class="strong-link">View Gallery <i class="fa fa-long-arrow-right"></i></span> </div>
+											</div>
+											<a href="./img/portfolio-7.jpg" class="cover-link" data-fancybox="gallery"></a>
+										</figcaption>
+									</figure>
+								</div>
+								<div class="column column-40 product mb-40" style="position: absolute; left: 342.984px; top: 0px;">
+									<figure class="hover-overlay mask aos-init" data-aos="remove-mask" data-aos-delay="200" data-aos-once="true"> <img src="./img/product3.jpg" class="img-fill" alt="Image">
+										<figcaption class="d-table">
+											<div class="d-table-cell align-bottom static-caption text-white">
+												
+												<div class="overlay-details"> <span class="strong-link">View Gallery <i class="fa fa-long-arrow-right"></i></span> </div>
+											</div>
+											<a href="./img/product3.jpg" class="cover-link" data-fancybox="gallery"></a>
+										</figcaption>
+									</figure>
+								</div>
+								<div class="column column-50 matrimony mb-40" style="position: absolute; left: 342.984px; top: 0px;">
+									<figure class="hover-overlay mask aos-init" data-aos="remove-mask" data-aos-delay="200" data-aos-once="true"> <img src="./img/matrimony2.jpg" class="img-fill" alt="Image">
+										<figcaption class="d-table">
+											<div class="d-table-cell align-bottom static-caption text-white">
+												
+												<div class="overlay-details"> <span class="strong-link">View Gallery <i class="fa fa-long-arrow-right"></i></span> </div>
+											</div>
+											<a href="./img/matrimony2.jpg" class="cover-link" data-fancybox="gallery"></a>
+										</figcaption>
+									</figure>
+								</div>
+								<div class="column column-40 product mb-40" style="position: absolute; left: 342.984px; top: 0px;">
+									<figure class="hover-overlay mask aos-init" data-aos="remove-mask" data-aos-delay="200" data-aos-once="true"> <img src="./img/product2.jpg" class="img-fill" alt="Image">
+										<figcaption class="d-table">
+											<div class="d-table-cell align-bottom static-caption text-white">
+												
+												<div class="overlay-details"> <span class="strong-link">View Gallery <i class="fa fa-long-arrow-right"></i></span> </div>
+											</div>
+											<a href="./img/product2.jpg" class="cover-link" data-fancybox="gallery"></a>
+										</figcaption>
+									</figure>
+								</div>
+								<div class="column column-40 model mb-40" style="position: absolute; left: 342.984px; top: 0px;">
+									<figure class="hover-overlay mask aos-init" data-aos="remove-mask" data-aos-delay="200" data-aos-once="true"> <img src="./img/green3.jpg" class="img-fill" alt="Image">
+										<figcaption class="d-table">
+											<div class="d-table-cell align-bottom static-caption text-white">
+												
+												<div class="overlay-details"> <span class="strong-link">View Gallery <i class="fa fa-long-arrow-right"></i></span> </div>
+											</div>
+											<a href="./img/green3.jpg" class="cover-link" data-fancybox="gallery"></a>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<footer class="footer">
+					<section class="container">
+						<div class="row no-margin row-center">
+							<div class="column column-33"> <strong>Creating Synergy via Design</strong>
+								<p class="mb-0 footer-copyright">© 2021 Studio to shoot </p>
+							</div>
+							<div class="column column-33 text-center"> <img src="./img/Studio png logo.PNG" class="footer-logo" alt="Logo"> </div>
+							<div class="column column-33">
+								<div class="float-right text-right">
+									<ul class="footer-social mb-0">
+										<li><a href="#" class="button draw-border"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#" class="button draw-border"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#" class="button draw-border"><i class="fa fa-dribbble"></i></a></li>
+										<li><a href="#" class="button draw-border"><i class="fa  fa-vimeo"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+				</footer>
+			</div>			
+
+		</main>
+
+		<div class="progress-wrap">
+		    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+		        <path d="M 0 0 H 100 V 100 H 0 L 0 0" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 400px, 400px; stroke-dashoffset: 400px;"></path>
+		    </svg>
+		</div>
+
+		<script src="js/js"></script>
+		<script src="js/jquery.js"></script>		
+		<script src="js/plugins.js"></script>
+		<script src="js/init.js"></script>
+
+	
+</body></html>

@@ -1,0 +1,15 @@
+
+  .studio_img {
+    width: 100%;  
+    overflow: hidden;
+  }
+  
+  
+  .studio_img img {
+    transition: transform .7s ease;
+  }
+  
+  
+  .studio_img:hover img {
+    transform: scale(1.2);
+  }
